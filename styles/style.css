@@ -1,211 +1,167 @@
 :root {
-  --main-background-color: #ffffff;
-  --sec-background-color: #f5f4fa;
-  --dark-background-color: #2f303a;
-
-  --accent-color: #2196f3;
-
-  --text-color: #212121;
-  --sec-text-color: #757575;
-  --light-text-color: #ffffff;
+  --main-font-size: 14px;
+  --secondary-font-size: 16px;
+  --text-primary-color: #212121;
+  --text-secondary-color: #757575;
+  --text-accent-color: #2196f3;
+  --mainbackground: #ffffff;
+  --second-background-color: #2f303a;
+  --third-background-color: #f5f4fa;
+  --background-accent: #188ce8;
 }
 
 body {
-  /* width: 1230px;
-    padding-left: 15px;
-    padding-right: 15px; */
-
-  font-weight: 400;
-  font-size: 14px;
-  letter-spacing: 0.015em;
-  font-family: Roboto, sans-serif;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 0.03em;
+  color: var(--text-primary-color);
 }
-
-/*header-container*/
-header {
-  /* height: 80px; */
-  background-color: var(--main-background-color);
-}
-
-ul,
-a,
-.current {
+/* webstudio nav*/
+.list {
   list-style: none;
+}
+.link {
   text-decoration: none;
 }
-
-.current {
-  color: var(--accent-color);
-}
-
-/*navigation-container*/
-.nav-logo-title,
-.logo-title {
-  font-family: Raleway, sans-serif;
-  text-decoration: none;
+.nav-logo {
+  font-family: 'Raleway', sans-serif;
   font-weight: 700;
   font-size: 26px;
-  line-height: 1.19;
-}
-
-.nav-logo-title > span {
-  color: var(--accent-color);
-}
-
-.nav-logo-title {
-  color: var(--text-color);
-}
-
-.logo-title {
-  color: var(--accent-color);
-}
-
-.navigation-links,
-.nav-link,
-.navigation-contacts,
-.contacts {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
+  line-height: 1.2;
+  color: var(--text-primary-color);
   text-decoration: none;
 }
 
-.navigation-links,
+/* .nav-logo:hover, */
+.nav-logo:focus {
+  color: var(--text-accent-color);
+}
+.logo-color {
+  color: var(--text-accent-color);
+}
 .nav-link {
-  color: var(--text-color);
+  font-weight: 500;
+  font-size: var(--main-font-size);
+  line-height: 0.9;
+  text-decoration: none;
+  color: var(--text-primary-color);
 }
-
-.navigation-contacts,
 .contacts {
-  color: var(--sec-text-color);
+  color: var(--text-secondary-color);
 }
 
-.nav-link:focus,
 .nav-link:hover,
-.contacts:focus,
-.contacts:hover {
-  color: var(--accent-color);
-  transition: color 0.25s;
+.nav-link:focus {
+  color: var(--text-accent-color);
+}
+.main-nav .nav-link.current {
+  color: var(--text-accent-color);
+}
+/* Studio page */
+.hero-section {
+  background: var(--second-background-color);
+  text-align: center;
+}
+.hero-heading {
+  font-size: 44px;
+  font-weight: 900;
+  line-height: 1.36;
+  text-transform: uppercase;
+  color: var(--mainbackground);
+}
+.hero-btn {
+  font-weight: 700;
+  font-size: var(--secondary-font-size);
+  line-height: 1.87;
+  cursor: pointer;
+  background: var(--text-accent-color);
+  color: var(--mainbackground);
 }
 
-/* hero container */
-.hero-title {
-  color: var(--light-text-color);
-  background-color: var(--dark-background-color);
+.hero-btn:focus,
+.hero-btn:hover {
+  background: var(--background-accent);
+}
 
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
-  text-align: center;
+/* advantages */
+.advantages-heading {
+  font-size: var(--main-font-size);
+  line-height: 1.1;
   text-transform: uppercase;
 }
-
-.button-primary {
-  border-radius: 4px;
-  padding: 10px 32px;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.9;
-  text-decoration: none;
-
-  align-items: center;
-  text-align: center;
-
-  color: var(--light-text-color);
-  background: var(--accent-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
+.advantages-text {
+  font-size: var(--main-font-size);
+  line-height: 1.71;
+  color: var(--text-secondary-color);
 }
-
-.section-title {
+/* what we do */
+.section-heading {
   font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+}
+/* our team */
+.team-section {
+  background: var(--third-background-color);
+}
+.team-heading {
+  font-weight: 500;
+  font-size: var(--secondary-font-size);
   line-height: 1.17;
   text-align: center;
 }
-
-.skills {
-  font-size: 14px;
-  text-transform: uppercase;
-}
-
-.skills-description {
-  line-height: 1.71;
-
-  color: var(--sec-text-color);
-}
-
-.names {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.19;
-  /* text-align: center; */
-
-  color: var(--text-color);
-}
-
-.profesion {
-  font-size: 16px;
-  line-height: 1.19;
-
+.team-text {
+  font-size: var(--secondary-font-size);
+  line-height: 1.17;
   text-align: center;
-
-  color: var(--sec-text-color);
+  color: var(--text-secondary-color);
 }
 
 /* portfolio */
-.buttons,
-.current-button {
-  background: var(--sec-background-color);
-  border-radius: 4px;
-  border-style: none;
-
+/* filter buttons */
+.btn {
   font-weight: 500;
-  font-size: 16px;
-  line-height: 1.6;
-  text-align: center;
-
-  color: var(--text-color);
-}
-
-.buttons:focus,
-.buttons:hover,
-.current-button {
-  color: var(--light-text-color);
-  background-color: var(--accent-color);
-  transition: color 0.25s, background-color 0.25s;
-  box-shadow: 0 0.5em 0.5em -0.4em var(--text-color);
-  transform: translateY(-0.15em);
+  font-size: var(--secondary-font-size);
+  line-height: 1.62;
   cursor: pointer;
+  background: var(--third-background-color);
 }
+.btn:hover,
+.btn:focus {
+  background: var(--text-accent-color);
+  color: var(--mainbackground);
+}
+.blue-btn {
+  background: var(--text-accent-color);
+  color: var(--mainbackground);
+}
+/* works */
 
-.project-title {
-  font-weight: 700;
+.works-heading {
   font-size: 18px;
   line-height: 2;
-
-  color: var(--text-color);
+  color: var(--text-primary-color);
 }
-
-.project-technology {
-  font-size: 16px;
-  line-height: 1.9;
-
-  color: var(--sec-text-color);
+.works-filter {
+  font-size: var(--secondary-font-size);
+  line-height: 1.87;
+  color: var(--text-secondary-color);
 }
 
 /* footer */
-.footer-container {
-  background-color: var(--dark-background-color);
+.footer-nav {
+  background: var(--second-background-color);
 }
-
-.location {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
+.footer-logo {
+  color: var(--mainbackground);
+}
+.footer-text {
+  font-size: var(--main-font-size);
   line-height: 1.71;
+  color: var(--mainbackground);
+  font-style: normal;
 }
-
-.location,
-.studio-footer {
-  color: var(--light-text-color);
+.footer-links {
+  line-height: 1.71;
+  color: #ffffff99;
+  font-style: normal;
 }
